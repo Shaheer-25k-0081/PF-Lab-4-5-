@@ -1,0 +1,83 @@
+#include <stdio.h>
+
+int main() {
+    char first_choice, second_choice;
+    printf("---University Course Registration---\n");
+
+    printf("1: CS\n2: EE\n3: BBA\n");
+    printf("Select a department: ");
+    scanf(" %d", &first_choice);
+
+    switch (first_choice)
+    {
+    case 1:
+        printf("1: Data Structures and Algorithms\n2: Database Management Systems(DBMS)\n3: Operating Systems\n");
+        printf("Choose one of these courses: ");
+        scanf(" %d", &second_choice);
+
+        switch (second_choice)
+        {
+        case 1:
+            printf("You choose Data Structures and Algorithms.\n");
+            break;
+        case 2:
+            printf("You choose Database Management Systems.\n");
+            break;
+        case 3:
+            printf("You choose Operating Systems.\n");
+            break;
+        
+        default:
+            printf("Invalid option, please choose from the available courses.");
+            break;
+        }
+        break;
+    case 2:
+        printf("1: Circuit Analysis\n2: Signals and Systems\n3: Electromagnetics\n");
+        printf("Choose one of these courses: ");
+        scanf(" %d", &second_choice);
+
+        switch (second_choice)
+        {
+        case 1:
+            printf("You choose Circuit Analysis.");
+            break;
+        case 2:
+            printf("You choose Signals and Systems.");
+            break;
+        case 3:
+            printf("You choose Electromagnetics.");
+            break;
+        
+        default:
+            printf("Invalid option, please choose from the available courses.");
+            break;
+        }
+        break;
+    case 3:
+        printf("1: Principles of Management\n2: Financial Accounting\n3: Marketing Management\n");
+        printf("Choose one of these courses: ");
+        scanf(" %d", &second_choice);
+
+        switch (second_choice)
+        {
+        case 1:
+            printf("You choose Principles of Management.");
+            break;
+        case 2:
+            printf("You choose Financial Accounting.");
+            break;
+        case 3:
+            printf("You choose Marketing Management.");
+            break;
+        
+        default:
+            printf("Invalid option, please choose from the available courses.");
+            break;
+        }
+    
+    default:
+        printf("Invalid option, please choose from the available departments.");
+        break;
+    }
+}

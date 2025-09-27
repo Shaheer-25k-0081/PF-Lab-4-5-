@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <math.h>
+
+void main() {
+    float loan, rate, si, ci, total, emi;
+    int time, type;
+
+    printf("Enter loan amount: ");
+    scanf(" %f", &loan);
+
+    printf("Enter annual rate of interest: ");
+    scanf(" %f", &rate);
+
+    printf("Enter time in years: ");
+    scanf(" %d", &time);
+
+    printf("Enter interest type(1 for simple and 2 for compound): ");
+    scanf(" %d", &type);
+
+    if (type == 1)
+    {
+        si = (loan * rate * time) / 100.0;
+        total = loan + si;
+        emi = total / (time * 12);
+
+        printf("EMI using simple interest = %.2f\n", emi);
+    }
+    else if (type == 2)
+    {
+        total = loan * pow((1 + rate / 100.0), time);
+        ci = total - loan;
+        emi = total / (time * 12);
+        printf("EMI using compound interest = %.2f\n", emi);
+    }
+    else
+    {
+        printf("Invalid interest type");
+    }
+    
+    
+}

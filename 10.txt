@@ -1,0 +1,63 @@
+#include <stdio.h>
+
+int main() {
+    int age, type;
+
+    printf("Enter your age: ");
+    scanf(" %d", &age);
+
+    printf("1: Action\n2: Comedy\n3: Horror\n");
+    printf("Please choose on these types of movies: ");
+    scanf(" %d", &type);
+
+    switch (type)
+    {
+    case 1:
+        if (age > 0 && age < 12)
+        {
+            printf("Your ticket type is Child Ticket and movie type is Action.");
+        }
+        else if (age >= 12 && age <= 60)
+        {
+            printf("Your ticket type is Adult Ticket and movie type is Action.");
+        }
+        else
+        {
+            printf("Your ticket type is Senior Citizen Ticket and movie type is Action.");
+        }
+        break;
+    case 2:
+        if (age > 0 && age < 12)
+        {
+            printf("Your ticket type is Child Ticket and movie type is Comedy.");
+        }
+        else if (age >= 12 && age <= 60)
+        {
+            printf("Your ticket type is Adult Ticket and movie type is Comedy.");
+        }
+        else
+        {
+            printf("Your ticket type is Senior Citizen Ticket and movie type is Comedy.");
+        }
+        break;
+    case 3:
+        if (age > 0 && age < 12)
+        {
+            printf("Your ticket type is Child Ticket and movie type is Horror.");
+        }
+        else if (age >= 12 && age <= 60)
+        {
+            printf("Your ticket type is Adult Ticket and movie type is Horror.");
+        }
+        else
+        {
+            printf("Your ticket type is Senior Citizen Ticket and movie type is Horror.");
+        }
+        break;
+    
+    default:
+        printf("Invalid option, please choose from the available types.");
+        break;
+    }
+    return 0;
+}
